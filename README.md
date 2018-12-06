@@ -1,5 +1,8 @@
 # Simaps
 
+## Idea
+This projet is a personal one to improve my Angular skills
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.4.
 
 ## Development server
