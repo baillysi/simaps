@@ -1,9 +1,45 @@
 <mat-toolbar color="primary">
-  <div class="first_title">Simaps Angular</div>
-  <div class="second_title">Let's explore the world</div>
-  <div class="second_title">
-    <button mat-raised-button color="accent">Try it out now !</button>
+  <div class="maintitle">Simaps Angular</div>
+  <div class="subtitle">Let's explore the world</div>
+
+  <div class="countrymenubutton" *ngIf="dashboard">
+    <button mat-raised-button color="accent" (click)="toggle()" routerLink="main">Try it out now !</button>
   </div>
+  
+  <div class="countrymenubutton" *ngIf="!dashboard">
+    <button mat-raised-button color="accent" (click)="toggle()" routerLink="dashboard">Go back to dashboard</button>
+  </div>
+
+  <div>
+    <button mat-button color="accent" [matMenuTriggerFor]="destinations">Destinations</button>
+    <mat-menu #destinations="matMenu">
+      <button mat-menu-item [matMenuTriggerFor]="america">America</button>
+    </mat-menu>
+
+    <mat-menu #america="matMenu">
+      <button mat-menu-item [matMenuTriggerFor]="central">Central America</button>
+      <button mat-menu-item [matMenuTriggerFor]="north">North America</button>
+      <button mat-menu-item [matMenuTriggerFor]="south">South America</button>
+    </mat-menu>
+
+    <mat-menu #central="matMenu">
+        <button mat-menu-item>Guatemala</button>
+        <button mat-menu-item>Nicaragua</button>
+        <button mat-menu-item>Honduras</button>
+        <button mat-menu-item>San Salvador</button>
+      </mat-menu>
+
+    <mat-menu #north="matMenu">
+      <button mat-menu-item>USA</button>
+      <button mat-menu-item>Canada</button>
+    </mat-menu>
+
+    <mat-menu #south="matMenu">
+      <button mat-menu-item>Bolivia</button>
+      <button mat-menu-item>Peru</button>
+    </mat-menu>
+  </div>
+
 </mat-toolbar>
 
 

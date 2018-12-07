@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  dashboard = true;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  toggle() {
+    this.dashboard=!this.dashboard;
   }
 
 }

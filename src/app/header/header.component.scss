@@ -1,4 +1,4 @@
-.first_title {
+.maintitle {
     padding: 5px;
     padding-right: 30px;
     font-size: 130%;
@@ -6,8 +6,24 @@
     border-width: 2px;
 }
 
-.second_title {
+.subtitle {
     padding: 5px;
     font-size: 100%;
     margin-left: 30px;
+}
+
+.mat-button {
+    color: rgb(231, 233, 115);
+    font-size: 100%;
+    padding-right: 50%;
+    padding-left: 50%;
+    padding-bottom: 20%;
+    padding-top: 20%;
+}
+
+.mat-menu-item {
+    width: 250px;
+    font-size: 125%;
+    padding-left: 20%;
+    padding-right: 0%;
 }
