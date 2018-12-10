@@ -1,23 +1,44 @@
 <mat-toolbar color="primary">
-  <div fxHide.gt-xs>
-      <button mat-icon-button>
-        <mat-icon>menu</mat-icon>
-      </button>
-  </div>
-  <div>
-      <a>Simaps Angular</a>
-  </div>
-  <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
-      <ul fxLayout fxLayoutGap="50px" class="navigation-items">
-          <li>
-              <a>Owner Actions</a>
-          </li>
-          <li>
-              <a>Account Actions</a>
-          </li>
-      </ul>
-  </div>
+    <div fxHide.gt-md>
+        <button mat-icon-button (click)="onToggleSidenav()">
+            <mat-icon>menu</mat-icon>
+        </button>
+    </div>
+    <div>
+        <a class="title">Simaps Angular</a>
+    </div>
+    <div>
+        <a class="subtitle">My first Angular project</a>
+    </div>
+    <div fxFlex fxLayout fxLayoutAlign="end" fxHide.lt-lg>
+        <ul fxLayout fxLayoutGap="2em" class="navigation-items">
+            <li>
+                <button mat-button [matMenuTriggerFor]="destinations">Destinations</button>
+                <mat-menu #destinations="matMenu" class="custom">
+                    <button mat-menu-item>Cuba</button>
+                    <button mat-menu-item>Guatemala</button>
+                    <button mat-menu-item>Argentina</button>
+                </mat-menu>
+            </li>
+            <li>
+                <button mat-button>Photos</button>
+            </li>
+            <li>
+                <button mat-button>Maps</button>
+            </li>
+            <li>
+                <button mat-button>Login</button>
+            </li>
+        </ul>
+    </div>
 </mat-toolbar>
+
+
+
+<!-- 
+    <main>
+        <router-outlet></router-outlet>
+    </main> -->
 
 
 <!--   <div *ngIf="dashboard">

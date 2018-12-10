@@ -7,6 +7,9 @@ import { RouterModule } from '@angular/router';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatTabsModule, MatListModule } from '@angular/material';
+import { MatSidenavModule } from '@angular/material';
+
 
 @NgModule({
   declarations: [],
@@ -18,7 +21,20 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     RouterModule,
     MatMenuModule,
     MatIconModule,
-    FlexLayoutModule
-  ]
+    FlexLayoutModule,
+    MatSidenavModule,
+    MatTabsModule,
+    MatListModule
+  ],
+  exports: [  
+    MatToolbarModule,
+    MatCardModule,
+    MatButtonModule,
+    MatMenuModule,
+    MatIconModule,
+    FlexLayoutModule,
+    MatSidenavModule,
+    MatTabsModule,
+    MatListModule]
 })
 export class SharedModule { }

@@ -1,22 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatIconModule } from '@angular/material/icon';
-import { FlexLayoutModule } from '@angular/flex-layout';
-import { MatButtonModule } from '@angular/material/button';
+import { SharedModule } from '../shared/shared.module';
+import { SidenavListComponent } from './sidenav-list/sidenav-list.component';
 
 @NgModule({
-  declarations: [HeaderComponent],
+  declarations: [
+    HeaderComponent,
+    SidenavListComponent
+  ],
   imports: [
     CommonModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatButtonModule,
-    FlexLayoutModule
+    SharedModule
     ],
   exports: [
-    HeaderComponent
+    HeaderComponent,
+    SidenavListComponent
   ]
 })
 export class CoreModule { }

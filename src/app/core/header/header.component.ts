@@ -9,7 +9,7 @@ export class HeaderComponent implements OnInit {
 
   dashboard = true;
 
-  @Output() sidenavToggle = new EventEmitter();
+  @Output() toggleSidenav = new EventEmitter();
 
   constructor() { }
 
@@ -21,7 +21,7 @@ export class HeaderComponent implements OnInit {
   }
 
   onToggleSidenav() {
-    this.sidenavToggle.emit();
+    this.toggleSidenav.emit();
   }
 
 }
