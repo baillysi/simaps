@@ -7,7 +7,7 @@ import { RouterModule } from '@angular/router';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { MatTabsModule, MatListModule } from '@angular/material';
+import { MatTabsModule, MatListModule, MatGridListModule } from '@angular/material';
 import { MatSidenavModule } from '@angular/material';
 
 
@@ -24,7 +24,9 @@ import { MatSidenavModule } from '@angular/material';
     FlexLayoutModule,
     MatSidenavModule,
     MatTabsModule,
-    MatListModule
+    MatListModule,
+    MatCardModule,
+    MatGridListModule 
   ],
   exports: [  
     MatToolbarModule,
@@ -35,6 +37,9 @@ import { MatSidenavModule } from '@angular/material';
     FlexLayoutModule,
     MatSidenavModule,
     MatTabsModule,
-    MatListModule]
+    MatListModule,
+    MatCardModule,
+    MatGridListModule
+  ]
 })
 export class SharedModule { }
