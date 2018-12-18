@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -7,21 +8,25 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  dashboard = true;
 
   @Output() toggleSidenav = new EventEmitter();
 
-  constructor() { }
+  constructor(private router: Router) {  
+  }
 
   ngOnInit() {
   }
 
-  toggle() {
-    this.dashboard = !this.dashboard;
-  }
-
   onToggleSidenav() {
     this.toggleSidenav.emit();
+  }
+
+  goMaps() {
+    this.router.navigateByUrl('/maps');
+  }
+
+  goBackDashboard() {
+    this.router.navigateByUrl('/dashboard');
   }
 
 }

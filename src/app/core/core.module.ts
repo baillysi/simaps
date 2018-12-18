@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { SharedModule } from '../shared/shared.module';
 import { SidenavListComponent } from './sidenav-list/sidenav-list.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     HeaderComponent,
-    SidenavListComponent
+    SidenavListComponent,
+    HomeComponent
   ],
   imports: [
     CommonModule,
@@ -15,7 +17,8 @@ import { SidenavListComponent } from './sidenav-list/sidenav-list.component';
     ],
   exports: [
     HeaderComponent,
-    SidenavListComponent
+    SidenavListComponent,
+    HomeComponent
   ]
 })
 export class CoreModule { }

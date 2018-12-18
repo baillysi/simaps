@@ -1,6 +1,10 @@
 
+.custom-header {
+    background-color: #242729;
+}
+
 .title {
-    color: azure;
+    color: #FDFFE3;
     padding-right: 1.8em;
     padding-left: 2em;
     padding-top: 0.3em;
@@ -10,7 +14,7 @@
     border-right-width: 2px;
 }
 .subtitle {
-    color: azure;
+    color: #FDFFE3;
     padding-right: 2em;
     padding-left: 2em;
     padding-top: 0.3em;
@@ -19,7 +23,7 @@
 }
 
 .navigation-items {
-    color: azure;
+    color: #FDFFE3;
     list-style-type: none;
     padding: 2em;
     margin: 0;
@@ -39,12 +43,17 @@ button.mat-menu-item {
     font-size: 1.1em;
 }
 
+button.mat-icon-button {
+    color: #FDFFE3;
+}
+
 button.mat-button:hover, button.mat-button:active {
-    color: rgb(223, 194, 67);
+    color: #D3741C;
 }
 
 mat-toolbar{
     border-radius: 3px;
+    position: relative;
 }
 
 @media(max-width: 600px){

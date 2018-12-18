@@ -1,4 +1,4 @@
-<mat-toolbar color="primary">
+<mat-toolbar class="custom-header">
     <div fxHide.gt-md>
         <button mat-icon-button (click)="onToggleSidenav()">
             <mat-icon>menu</mat-icon>
@@ -24,28 +24,20 @@
                 <button mat-button>Photos</button>
             </li>
             <li>
-                <button mat-button>Maps</button>
+                <button mat-button (click)="goMaps()">Maps</button>
             </li>
             <li>
                 <button mat-button>Login</button>
+            </li>
+            <li>
+                <button mat-icon-button (click)="goBackDashboard()">
+                    <mat-icon>home</mat-icon>
+                </button>
             </li>
         </ul>
     </div>
 </mat-toolbar>
 
-<!-- 
-    <main>
-        <router-outlet></router-outlet>
-    </main> -->
-
-
-<!--   <div *ngIf="dashboard">
-    <button mat-raised-button color="accent" (click)="toggle()" routerLink="main">Try it out now !</button>
-  </div>
-
-  <div *ngIf="!dashboard">
-    <button mat-raised-button color="accent" (click)="toggle()" routerLink="dashboard">Go back to dashboard</button>
-  </div> -->
 
 
 

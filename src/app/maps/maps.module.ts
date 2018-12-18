@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MapsDashboardComponent } from './maps-dashboard/maps-dashboard.component';
 import { SharedModule } from '../shared/shared.module';
+import { MapsListComponent } from './maps-list/maps-list.component';
 
 @NgModule({
-  declarations: [MapsDashboardComponent],
+  declarations: [MapsListComponent],
   imports: [
     CommonModule,
     SharedModule
   ],
-  exports: [
-    MapsDashboardComponent
+  exports: [  
   ]
 })
+
 export class MapsModule { }
