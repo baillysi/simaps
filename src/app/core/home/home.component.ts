@@ -1,19 +1,25 @@
 import { Component, OnInit } from '@angular/core';
-import { MAPS } from 'src/app/shared/mock-maps';
+import { Maps } from 'src/app/shared/maps';
+import { RestService } from 'src/app/rest.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
+
 export class HomeComponent implements OnInit {
 
-  maps = MAPS;
+  maps : Maps;
   
-  constructor() { }
+  constructor(private restService: RestService) { }
 
   ngOnInit() {
-    console.log(this.maps);
+  }
+
+  getMaps(): void {
+    this.restService.getMaps()
+        .subscribe(output => {this.maps = output, console.log(this.maps)});
   }
 
 }

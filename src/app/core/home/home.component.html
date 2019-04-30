@@ -2,13 +2,14 @@
 <h2 fxLayoutAlign="center">Share your tips all around the world</h2>
 
 <div fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutGap="60px" fxLayoutAlign="flex-start" class="main">
-    <ng-container *ngFor="let map of maps">
+    <!-- <button mat-button (click)="getMaps()">TEST</button> -->
+    <!-- <ng-container *ngFor="let map of maps"> -->
     <mat-card  fxFlex="0 1 calc(33.3% - 60px)" fxFlex.lt-lg="0 1 calc(50% - 60px)" fxFlex.lt-md="100%" class="item">
         <mat-card-header>
-            <mat-card-title>{{ map.name }}</mat-card-title>
-            <mat-card-subtitle>{{ map.name }}</mat-card-subtitle>
+            <mat-card-title>{{ getMaps().name }}</mat-card-title>
+            <mat-card-subtitle>{{ maps.id }}</mat-card-subtitle>
         </mat-card-header>
         <img mat-card-image src="../../../assets/img/test.jpg">
         </mat-card>
-    </ng-container>
+    <!-- </ng-container> -->
 </div>

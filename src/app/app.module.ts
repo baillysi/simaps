@@ -6,6 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import { MapsModule } from './maps/maps.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { MapsModule } from './maps/maps.module';
     BrowserAnimationsModule,
     CoreModule,
     SharedModule,
-    MapsModule
+    MapsModule,
+    HttpClientModule
     ],
   providers: [],
   bootstrap: [AppComponent]
